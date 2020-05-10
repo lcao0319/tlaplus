@@ -30,9 +30,8 @@ public class TLACompletionProcessor extends ToolboxCompletionProcessor implement
 		// active inside an algorithm definition (chicken or egg problem).
 		final List<CompletionProposalTemplate> l = new ArrayList<CompletionProposalTemplate>(1);
 		l.add(new CompletionProposalTemplate(
-				"(***************************************************************************\r\n"
-						+ "--algorithm AlgorithmName {\r\n}\r\n"
-						+ "***************************************************************************)\r\n",
+				"(*--algorithm AlgorithmName\r\n"
+						+ "end algorithm;*)\r\n",
 				IPCalReservedWords.ALGORITHM, IPCalReservedWords.ALGORITHM_HELP));
 		proposals.put(ITLAReserveredWords.ALGORITHM, l);
     }
